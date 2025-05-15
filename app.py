@@ -35,11 +35,11 @@ def pagenotfound():
 
 @app.route('/login.html', methods=["GET", "POST"])
 def login():
-    if request.method = "POST":
+    if request.method == "POST":
       username = request.form['username']
       password = request.form['password']
       user_password_hash = user_db.get(username)
-      if user_password_hash and check_password_hash(user_password_hash, password)
+      if user_password_hash and check_password_hash(user_password_hash, password):
         return "GG YOU DID IT!!!"
       else:
         return "WOW BAD JOB!!!"
