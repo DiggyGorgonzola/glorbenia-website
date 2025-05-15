@@ -241,13 +241,15 @@
     </div>
   </div>
 <script>
-  const box1 = document.getElementById('main');
-  const box2 = document.getElementById('admin');
-
-  const box1Rect = box1.getBoundingClientRect();
-
-  admin.style.top = `${box1Rect.bottom + 10}px`;
-  admin.style.bottom = `${admin.style.top + 30}px`;
+  window.onload = () => {
+    const box1 = document.getElementById('main');
+    const box2 = document.getElementById('admin');
+  
+    const box1Rect = box1.getBoundingClientRect();
+  
+    admin.style.top = `${box1Rect.bottom - 10}px`;
+    admin.style.bottom = `${admin.style.top + 30}px`;
+  };
 </script>
 </body>
 </html>
