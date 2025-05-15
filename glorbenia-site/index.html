@@ -55,7 +55,6 @@
     /* Admin Sidebar */
     .admin {
       position: fixed;
-      bottom: 150px; /* space below main sidebar */
       right: calc(50% - 423px);
       width: 813px;
       background-color: #ffffff;
@@ -247,7 +246,8 @@
 
   const box1Rect = box1.getBoundingClientRect();
 
-  admin.style.top = `${box1Rect.bottom - 10}px`;
+  admin.style.top = `${box1Rect.bottom + 10}px`;
+  admin.style.bottom = `${admin.style.top + 30}px`;
 </script>
 </body>
 </html>
