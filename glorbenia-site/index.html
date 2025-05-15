@@ -75,6 +75,7 @@
 
     .admin a {
       text-decoration: none;
+      text-align: center;
       color: #000080;
     }
 
@@ -247,7 +248,7 @@
   
     const box1Rect = box1.getBoundingClientRect();
   
-    admin.style.top = `${box1Rect.bottom - 10}px`;
+    admin.style.top = `${box1Rect.bottom + 10}px`;
     admin.style.bottom = `${admin.style.top + 30}px`;
   };
 </script>
