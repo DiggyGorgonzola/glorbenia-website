@@ -32,7 +32,7 @@ def pagenotfound():
   return render_template("pagenotfound.html")
 
 @app.route('/citizenship.html')
-def pagenotfound():
+def citizenship():
   return render_template("citizenship.html")
 
 @app.route('/login.html', methods=["GET", "POST"])
