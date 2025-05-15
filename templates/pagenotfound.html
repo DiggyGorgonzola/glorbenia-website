@@ -7,8 +7,8 @@
 <body>
   <div>
     <a href="index.html" class="home-button">home</a><br><br>
-    <img src="assets/diggy.png" alt="Diggy""><br><br>
-    <img src="assets/slope-ball.gif" alt="Slope Ball Gif" class="slope">
+    <img src="{{ url_for('static', filename='assets/diggy.png') }}" alt="Diggy""><br><br>
+    <img src="{{ url_for('static', filename='slope-ball.png') }}" alt="Slope Ball Gif" class="slope">
     <style>
     .slope {
       width: 300px;
@@ -16,8 +16,8 @@
     }
     @font-face {
       font-family: 'Slope';
-      src: url('assets/fonts/SixEightZeroNineChargen-Regular.woff2') format('woff2'),
-        url('assets/fonts/SixEightZeroNineChargen-Regular.woff') format('woff');
+      src: url({{ url_for('static', filename='assets/fonts/SixEightZeroNineChargen-Regular.woff') }}) format('woff2'),
+        url({{ url_for('static', filename='assets/fonts/SixEightZeroNineChargen-Regular.woff2') }}) format('woff');
       font-weight: normal;
       font-style: normal;
     }
