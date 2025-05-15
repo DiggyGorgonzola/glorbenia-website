@@ -1,4 +1,4 @@
-from glorbenia-site import backend
+from glorbenia-site import app
 
 if __name__ == "__main__":
-  backend.run()
+  app.run()
