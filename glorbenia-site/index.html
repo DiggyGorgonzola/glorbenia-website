@@ -195,7 +195,7 @@
   </div>
 
   <!-- Admin Bottombar -->
-  <div class="admin">
+  <div class="admin" id="admin">
     <h3>Admin Panel</h3>
     <a href="pagenotfound.html">Login</a> |
     <a href="pagenotfound.html">Edit Pages</a> |
@@ -204,7 +204,7 @@
   </div>
 
   <!-- Main Container -->
-  <div class="container">
+  <div class="container" id="main">
     <img src="glorbenia-flag.png" alt="Flag of Glorbenia" class="flag">
     <h1>Welcome to the United Webstates of Glorbenia</h1>
 
@@ -241,6 +241,13 @@
       &copy; 2025 Glorbenian Digital Congress • "Freedom by fiber, rule by right."
     </div>
   </div>
+<script>
+  const box1 = document.getElementById('main');
+  const box2 = document.getElementById('admin');
 
+  const box1Rect = box1.getBoundingClientRect();
+
+  admin.style.top = `${box1Rect.bottom - 10}px`;
+</script>
 </body>
 </html>
