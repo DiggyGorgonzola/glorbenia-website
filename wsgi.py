@@ -1,4 +1,4 @@
-from glorbenia-site import app
+from glorbenia_site import app
 
 if __name__ == "__main__":
   app.run()
