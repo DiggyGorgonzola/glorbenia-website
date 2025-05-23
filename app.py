@@ -12,30 +12,30 @@ def home():
   return render_template("index.html")
 
 
-@app.route('/index')
+@app.route('/index.html')
 def index():
   return render_template("index.html")
 
 
-@app.route('/webstates')
+@app.route('/webstates.html')
 def webstates():
   return render_template("webstates.html")
 
 
-@app.route('/updates')
+@app.route('/updates.html')
 def updates():
   return render_template("updates.html")
 
 
-@app.route('/pagenotfound')
+@app.route('/pagenotfound.html')
 def pagenotfound():
   return render_template("pagenotfound.html")
 
-@app.route('/citizenship')
+@app.route('/citizenship.html')
 def citizenship():
   return render_template("citizenship.html")
 
-@app.route('/glorbgames')
+@app.route('/glorbgames.html')
 def index():
   return render_template("glorbgames.html")
 
