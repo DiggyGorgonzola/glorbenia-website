@@ -7,7 +7,7 @@ users_db = {} # database, I'll fix this later
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
 
-@app.route('/')
+@app.route('/index.html')
 def home():
   return render_template("index.html")
 
