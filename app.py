@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import request, render_template, redirect, url_for
 
-users_db = {"pass1234:"Diggy"} # database, I'll fix this later
+users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
