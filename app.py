@@ -42,7 +42,7 @@ def login():
     password = request.form['password']
     user_password_hash = user_db.get(username)
     if user_password_hash and check_password_hash(user_password_hash, password):
-      return "GG YOU DID IT!!!"
+      return render_template("citizenship.html")
     else:
-      return "WOW BAD JOB!!!"
+      return render_template("index.html")
   return render_template("login.html")
