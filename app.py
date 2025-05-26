@@ -42,8 +42,6 @@ def login():
     password = request.form['password']
     if username == users_db[password]:
       print("hello")
-      return render_template("citizenship.html")
     else:
       print("goodbye")
-      return render_template("index.html")
   return render_template("login.html")
