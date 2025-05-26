@@ -40,7 +40,7 @@ def login():
   if request.method == "POST":
     username = request.form['username']
     password = request.form['password']
-    user_password_hash = user_db.get(username)
+    user_password_hash = users_db.get(username)
     if user_password_hash and password:
       print("hello")
       return render_template("citizenship.html")
