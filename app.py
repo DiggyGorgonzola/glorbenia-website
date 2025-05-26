@@ -2,7 +2,7 @@ from flask import Flask, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import request, render_template, redirect, url_for
 
-users_db = {} # database, I'll fix this later
+users_db = {"Diggy"} # database, I'll fix this later
 
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
@@ -41,8 +41,10 @@ def login():
     username = request.form['username']
     password = request.form['password']
     user_password_hash = user_db.get(username)
-    if user_password_hash and check_password_hash(user_password_hash, password):
+    if user_password_hash and password:
+      print("hello")
       return render_template("citizenship.html")
     else:
+      print("goodbye")
       return render_template("index.html")
   return render_template("login.html")
