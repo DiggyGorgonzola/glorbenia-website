@@ -2,12 +2,13 @@ from flask import Flask, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import request, render_template, redirect, url_for
 
-users_db = {} # database, I'll fix this later
+users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
 
-@app.route('/index.html')
+
+@app.route('/')
 def home():
   return render_template("index.html")
 
@@ -40,9 +41,8 @@ def login():
   if request.method == "POST":
     username = request.form['username']
     password = request.form['password']
-    user_password_hash = user_db.get(username)
-    if user_password_hash and check_password_hash(user_password_hash, password):
-      return "GG YOU DID IT!!!"
+    if username == users_db[password]:
+      print("hello")
     else:
-      return "WOW BAD JOB!!!"
+      print("goodbye")
   return render_template("login.html")
