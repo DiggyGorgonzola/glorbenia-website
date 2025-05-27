@@ -11,6 +11,10 @@ app.secret_key = "Diggy Gorgonzola"
 def home():
   return render_template("index.html")
 
+@app.route('/')
+def home():
+  return render_template("index.html")
+
 @app.route('/webstates.html')
 def webstates():
   return render_template("webstates.html")
