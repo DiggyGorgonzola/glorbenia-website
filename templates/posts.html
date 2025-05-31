@@ -78,9 +78,14 @@
       <h1>Glorbenia Forums</h1>
       <div class="nav">
         <a href="/">Home</a>
+        <a href="/new_post.html">Create a new post</a>
       </div>
       <div class="content">
-          <p>placeholder text about posts</p><br><br><p>hi :3</p>
+        <ul>
+          {% for post in posts %}
+            <li><strong>{{ post.title }}</strong> - {{ post.content }}</li>
+          {% endfor %}
+        </ul>
       </div>
   </body>
 </html>
