@@ -62,7 +62,7 @@ def new_post():
         post = Post(title=title, content=content, user_id=1) # for right now
         post_db.session.add(post)
         post_db.session.commit()
-        return redirect(url_for('posts'))
+        return redirect(url_for('/posts.html'))
     return render_template('new_post.html')
 
 @app.route('/login.html', methods=["GET", "POST"])
