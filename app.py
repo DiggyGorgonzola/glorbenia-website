@@ -4,14 +4,12 @@ from flask import request, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
-
-
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///forum.db'
 
 
 users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 post_db = SQLAlchemy(app)
 
-SQLALCHEMY_BINDS = {}
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
