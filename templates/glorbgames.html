@@ -72,15 +72,15 @@
     <h1>Glorb Games</h1>
 
     <div class="nav">
-      <a href="/">Home</a>
+      <a href="{{ url_for('/index') }}">Home</a>
     </div>
     
     <div class="content">
       <p>placeholder 2</p>
       <div class="first">
-        <a href="slope.html><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
-        <a href="slope.html><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
-        <a href="slope.html><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
+        <a href="{{ url_for('slope.html') }}><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
+        <a href="{{ url_for('slope.html') }}><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
+        <a href="{{ url_for('slope.html') }}><img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}g" alt="Flag of Glorbenia" class="flag"></a>
       </div><br>
       <div class="first">
         <p>GOONLORD MESSIAH</p>
