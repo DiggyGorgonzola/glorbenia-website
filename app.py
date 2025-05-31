@@ -9,10 +9,9 @@ app.secret_key = "Diggy Gorgonzola"
 
 
 users_db = {"pass1234":"Diggy"} # database, I'll fix this later
-post_db = SQLAlchemy(app, model_class=Base)
+post_db = SQLAlchemy(app)
 
-class Base(DeclarativeBase):
-    pass
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(80), unique=True, nullable=False)
