@@ -22,38 +22,42 @@ class Post(post_db.Model):
 with app.app_context():
      post_db.create_all()
 @app.route('/')
-def home():
-  return render_template("index.html")
+def e():
+  return redirect(url_for('/index'))
 
-@app.route('/webstates.html')
+@app.rout('/home')
+def home():
+    return render_template("index.html"
+
+@app.route('/webstates')
 def webstates():
   return render_template("webstates.html")
 
 
-@app.route('/updates.html')
+@app.route('/updates')
 def updates():
   return render_template("updates.html")
 
 
-@app.route('/pagenotfound.html')
+@app.route('/pagenotfound')
 def pagenotfound():
   return render_template("pagenotfound.html")
 
-@app.route('/citizenship.html')
+@app.route('/citizenship')
 def citizenship():
   return render_template("citizenship.html")
 
-@app.route('/glorbgames.html')
+@app.route('/glorbgames')
 def index():
     return render_template("glorbgames.html")
 
-@app.route('/posts.html')
+@app.route('/posts')
 def posts():
     all_posts = Post.query.all()
-    return render_template('posts.html', posts=all_posts)
+    return render_template(url_for('/posts'), posts=all_posts)
 
 
-@app.route('/new_post.html', methods=['GET', 'POST'])
+@app.route('/new', methods=['GET', 'POST'])
 def new_post():
     if request.method == 'POST':
         title = request.form['title']
@@ -64,15 +68,15 @@ def new_post():
         post_db.session.add(post)
         post_db.session.commit()
         return redirect('/posts.html')
-    return render_template('new_post.html')
+    return render_template(url_for('/posts'))
 
-@app.route('/login.html', methods=["GET", "POST"])
+@app.route('/login', methods=["GET", "POST"])
 def login():
     if request.method == "POST":
         username = request.form['username']
         password = request.form['password']
         if username == users_db[password]:
-            return redirect('/posts.html')
+            return redirect(url_for('/posts'))
         else:
-            return redirect('/index.html')
+            return redirect(url_for('/index'))
     return render_template("login.html")
