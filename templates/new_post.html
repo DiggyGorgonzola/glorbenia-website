@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Citizenship</title>
+    <title>New Post</title>
     <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/glorbenia-flag.png') }}">
     <style>
     body {
@@ -72,12 +72,18 @@
   <body>
     <div class="container">
       <img src="{{ url_for('static', filename='assets/glorbenia-flag.png') }}" alt="Flag of Glorbenia" class="flag">
-      <h1>Citizenship</h1>
+      <h1>New Post!</h1>
       <div class="nav">
         <a href="/">Home</a>
-      </div>
+      </div><br>
       <div class="content">
-          <p>placeholder text about citizenship</p><br><br><p>the application form will be around here somewhere</p>
+        <p>Create a new post!</p>
       </div>
+      <form method="post">
+        Title: <input type="text" name="Post Title" required><br>
+        Content: <input type="text" name="Post content" required><br>
+        Color: <input type="text" name="Color (Hexadecimal)"><br>
+        <button type="submit">Log in :3</button>
+      </form>
   </body>
 </html>
