@@ -11,7 +11,7 @@ users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 post_db = SQLAlchemy(app)
 
 class User(post_db.Model):
-    id = post_db.Column(db.Integer, primary_key=True)
+    id = post_db.Column(post_db.Integer, primary_key=True)
     username = post_db.Column(post_db.String(80), unique=True, nullable=False)
 
 class Post(db.Model):
@@ -59,9 +59,9 @@ def new_post():
         title = request.form['title']
         content = request.form['content']
         # assuming user_id is 1 for now
-        post = Post(title=title, content=content, user_id=1)
-        db.session.add(post)
-        db.session.commit()
+        post = Post(title=title, content=content, user_id=1) # for right now
+        post_db.session.add(post)
+        post_db.session.commit()
         return redirect(url_for('posts'))
     return render_template('new_post.html')
 
