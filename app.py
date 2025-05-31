@@ -14,7 +14,7 @@ class User(post_db.Model):
     id = post_db.Column(post_db.Integer, primary_key=True)
     username = post_db.Column(post_db.String(80), unique=True, nullable=False)
 
-class Post(db.Model):
+class Post(post_db.Model):
     id = post_db.Column(post_db.Integer, primary_key=True)
     title = post_db.Column(post_db.String(120), nullable=False)
     content = post_db.Column(post_db.Text, nullable=False)
