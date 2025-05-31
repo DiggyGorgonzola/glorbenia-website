@@ -45,7 +45,7 @@ def citizenship():
 
 @app.route('/glorbgames.html')
 def index():
-  return render_template("glorbgames.html")
+    return render_template("glorbgames.html")
 
 @app.route('/posts.html')
 def posts():
@@ -58,6 +58,7 @@ def new_post():
     if request.method == 'POST':
         title = request.form['title']
         content = request.form['content']
+        color = request.form['color']
         # assuming user_id is 1 for now
         post = Post(title=title, content=content, user_id=1) # for right now
         post_db.session.add(post)
@@ -67,11 +68,11 @@ def new_post():
 
 @app.route('/login.html', methods=["GET", "POST"])
 def login():
-  if request.method == "POST":
-    username = request.form['username']
-    password = request.form['password']
-    if username == users_db[password]:
-      return redirect('/posts.html')
-    else:
-      return redirect('/index.html')
-  return render_template("login.html")
+    if request.method == "POST":
+        username = request.form['username']
+        password = request.form['password']
+        if username == users_db[password]:
+            return redirect('/posts.html')
+        else:
+            return redirect('/index.html')
+    return render_template("login.html")
