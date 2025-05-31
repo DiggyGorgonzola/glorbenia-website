@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import request, render_template, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
 
 users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 
