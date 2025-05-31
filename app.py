@@ -10,17 +10,17 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///forum.db'
 users_db = {"pass1234":"Diggy"} # database, I'll fix this later
 post_db = SQLAlchemy(app)
 
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(80), unique=True, nullable=False)
+class User(post_db.Model):
+    id = post_db.Column(db.Integer, primary_key=True)
+    username = post_db.Column(post_db.String(80), unique=True, nullable=False)
 
 class Post(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(120), nullable=False)
-    content = db.Column(db.Text, nullable=False)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    id = post_db.Column(post_db.Integer, primary_key=True)
+    title = post_db.Column(post_db.String(120), nullable=False)
+    content = post_db.Column(post_db.Text, nullable=False)
+    user_id = post_db.Column(post_db.Integer, post_db.ForeignKey('user.id'), nullable=False)
 with app.app_context():
-     db.create_all()
+     post_db.create_all()
 @app.route('/')
 def home():
   return render_template("index.html")
