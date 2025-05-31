@@ -42,7 +42,7 @@ def login():
     username = request.form['username']
     password = request.form['password']
     if username == users_db[password]:
-      return redirect('/')
+      return redirect('/index.html')
     else:
       return redirect('/citizenship.html')
   return render_template("login.html")
