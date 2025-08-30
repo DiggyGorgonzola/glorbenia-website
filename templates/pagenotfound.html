@@ -7,7 +7,7 @@
 </head>
 <body>
   <div>
-    <a href="index.html" class="home-button">home</a><br><br>
+    <a href="{{ url_for("/index") }}" class="home-button">home</a><br><br>
     <img src="{{ url_for('static', filename='assets/diggy.png') }}" alt="Diggy""><br><br>
     <img src="{{ url_for('static', filename='assets/slope-ball.gif') }}" alt="Slope Ball Gif" class="slope">
     <style>
