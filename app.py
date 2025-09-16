@@ -9,7 +9,7 @@ app.secret_key = "Diggy Gorgonzola"
 
 @app.route('/')
 def starting():
-  return render_remplate("index.html")
+  return render_template("index.html")
   
 @app.route('/index.html')
 def index():
