@@ -7,6 +7,10 @@ users_db = {} # database, I'll fix this later
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
 
+@app.route('/')
+def starting():
+  return render_remplate("index.html")
+  
 @app.route('/index.html')
 def index():
   return render_template("index.html")
