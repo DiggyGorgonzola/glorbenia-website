@@ -30,7 +30,7 @@ def citizenship():
   return render_template("citizenship.html")
 
 @app.route('/glorbgames.html')
-def index():
+def glorbgames():
   return render_template("glorbgames.html")
 
 
