@@ -37,6 +37,10 @@ def citizenship():
 def glorbgames():
   return render_template("glorbgames.html")
 
+@app.rout('/slope.html')
+def slope():
+  return render_template("slope.html")
+
 
 
 @app.route('/login.html', methods=["GET", "POST"])
