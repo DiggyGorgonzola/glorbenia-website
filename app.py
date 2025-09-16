@@ -8,7 +8,7 @@ app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
 
 @app.route('/index.html')
-def home():
+def index():
   return render_template("index.html")
 
 @app.route('/webstates.html')
