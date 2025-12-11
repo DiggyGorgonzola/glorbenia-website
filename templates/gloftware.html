@@ -1,3 +1,33 @@
 <!DOCTYPE html>
-# OMG HAII DIGGY
-<head>  testing </head>
+<html>
+<head>
+  <title>Page still a work in progress :3</title>
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='assets/glorbenia-flag.png') }}">
+  <h1>If you're reading this, Diggy has failed in the construction of this page... for now. >:3</h1>
+</head>
+<body>
+  <div>
+    <a href="index.html" class="home-button">home</a><br><br>
+    <img src="{{ url_for('static', filename='assets/diggy.png') }}" alt="Diggy""><br><br>
+    <img src="{{ url_for('static', filename='assets/slope-ball.gif') }}" alt="Slope Ball Gif" class="slope">
+    <style>
+    .slope {
+      width: 300px;
+      height: auto;
+    }
+    @font-face {
+      font-family: 'Slope';
+      src: url({{ url_for('static', filename='assets/fonts/SixEightZeroNineChargen-Regular.woff') }}) format('woff2'),
+        url({{ url_for('static', filename='assets/fonts/SixEightZeroNineChargen-Regular.woff2') }}) format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    .home-button {
+      font-family: 'Slope', sans-serif;
+      font-size: 100px;
+    }
+    </style>
+  </div>
+</body>
+</html>
