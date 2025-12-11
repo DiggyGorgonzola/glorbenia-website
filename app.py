@@ -41,6 +41,15 @@ def glorbgames():
 def slopeoffline():
   return render_template("slopeoffline.html")
 
+@app.route("/gloftware")
+def glor():
+    return render_template("gloftware.html")
+
+@app.route("/diplomacy")
+def glor():
+    return render_template("diplomacy.html")
+
+
 
 
 @app.route('/login.html', methods=["GET", "POST"])
