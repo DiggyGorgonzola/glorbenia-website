@@ -42,11 +42,11 @@ def slopeoffline():
   return render_template("slopeoffline.html")
 
 @app.route("/gloftware.html")
-def glor():
+def gloftware():
     return render_template("gloftware.html")
 
 @app.route("/diplomacy.html")
-def glor():
+def diplomacy():
     return render_template("diplomacy.html")
 
 
