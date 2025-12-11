@@ -41,11 +41,11 @@ def glorbgames():
 def slopeoffline():
   return render_template("slopeoffline.html")
 
-@app.route("/gloftware")
+@app.route("/gloftware.html")
 def glor():
     return render_template("gloftware.html")
 
-@app.route("/diplomacy")
+@app.route("/diplomacy.html")
 def glor():
     return render_template("diplomacy.html")
 
