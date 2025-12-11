@@ -6,6 +6,7 @@ users_db = {} # database, I'll fix this later
 
 app = Flask(__name__)
 app.secret_key = "Diggy Gorgonzola"
+# OH YOU'RE SO SPECIAL TO NAME THE SECRET KEY AFTER YOURSELF -Fendergluid /j
 
 @app.route('/')
 def starting():
